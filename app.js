@@ -3,12 +3,10 @@ const app = express();
 const request = require('request');
 const moment = require('moment');
 
-app.get('/', function (req, res) {  
-  const response = {
-    code: 200,
-    message: 'Andromeda ready to take off.'
-  }
-  res.json(response);
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
+  res.render('index');
 });
 
 app.get('/loc', function(req, res) {
