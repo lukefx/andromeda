@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const request = require('request');
 const moment = require('moment');
 
+app.use(cors());
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
